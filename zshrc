@@ -7,8 +7,9 @@ export ZSH=/Users/$DEFAULT_USER/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 # ZSH_THEME="robbyrussell"
-ZSH_THEME="suvash"
+# ZSH_THEME="suvash"
 # ZSH_THEME="agnoster"
+ZSH_THEME="avit"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -88,3 +89,7 @@ export EDITOR='vim'
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export PATH="/Users/ernestocid/dev/tools/gradle2/bin:/Users/ernestocid/Tools/Leiningen:/Users/ernestocid/dev/tools/phantomjs/bin:$PATH"
+export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
+export PATH="/Users/ernesto/Workspace/good-scripts/bin:${PATH}"
+
+source ~/.aliases
