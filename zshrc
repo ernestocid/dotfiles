@@ -1,13 +1,15 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/ernestocid/.oh-my-zsh
+DEFAULT_USER=`whoami`
+export ZSH=/Users/$DEFAULT_USER/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 # ZSH_THEME="robbyrussell"
-ZSH_THEME="suvash"
+# ZSH_THEME="suvash"
 # ZSH_THEME="agnoster"
+ZSH_THEME="avit"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -51,7 +53,7 @@ ZSH_THEME="suvash"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git rails bundler zsh-autosuggestions)
 
 # User configuration
 
@@ -65,7 +67,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
+export EDITOR='vim'
 # else
 #   export EDITOR='mvim'
 # fi
@@ -87,3 +89,7 @@ source $ZSH/oh-my-zsh.sh
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export PATH="/Users/ernestocid/dev/tools/gradle2/bin:/Users/ernestocid/Tools/Leiningen:/Users/ernestocid/dev/tools/phantomjs/bin:$PATH"
+export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
+export PATH="/Users/ernesto/Workspace/good-scripts/bin:${PATH}"
+
+source ~/.aliases
