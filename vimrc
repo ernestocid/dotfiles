@@ -22,6 +22,7 @@ Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 Plugin 'posva/vim-vue'
+Plugin 'christoomey/vim-tmux-navigator'
 
 " Themes
 Plugin 'dracula/vim'
