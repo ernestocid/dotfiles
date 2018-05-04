@@ -9,6 +9,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-haml'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
@@ -31,8 +32,9 @@ call vundle#end()
 
 syntax on
 set number
-colorscheme dracula
+set nowrap
 set expandtab
+set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 
