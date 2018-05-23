@@ -24,13 +24,23 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 Plugin 'posva/vim-vue'
 Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'thoughtbot/vim-rspec'
+Plugin 'Yggdroot/indentLine'
+Plugin 'vim-syntastic/syntastic'
 
 " Themes
-Plugin 'dracula/vim'
+Plugin 'flazz/vim-colorschemes'
+Plugin 'aradunovic/perun.vim'
+Plugin 'crusoexia/vim-dracula'
 
 call vundle#end()
 
 syntax on
+set t_Co=256
+set background=dark
+colorscheme seti
+highlight Normal ctermbg=NONE
+highlight nonText ctermbg=NONE
 set number
 set nowrap
 set expandtab
@@ -46,6 +56,8 @@ autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in
 map <C-n> :NERDTreeToggle<CR>
 
 filetype plugin indent on    " required
+
+let g:indentLine_color_term = 239
 
 " JSX Configurations
 let g:jsx_ext_required = 0
