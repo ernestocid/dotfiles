@@ -48,6 +48,7 @@ set expandtab
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
+set clipboard=unnamed
 
 " Autostart NERDTree when vim is opened
 autocmd StdinReadPre * let s:std_in=1
