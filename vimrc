@@ -27,6 +27,7 @@ Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'Yggdroot/indentLine'
 Plugin 'vim-syntastic/syntastic'
+Plugin 'w0rp/ale'
 
 " Themes
 Plugin 'flazz/vim-colorschemes'
@@ -37,8 +38,8 @@ call vundle#end()
 
 syntax on
 set t_Co=256
-set background=dark
-colorscheme seti
+set background=light
+colorscheme solarized
 highlight Normal ctermbg=NONE
 highlight nonText ctermbg=NONE
 set number
