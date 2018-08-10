@@ -28,6 +28,8 @@ Plugin 'thoughtbot/vim-rspec'
 Plugin 'Yggdroot/indentLine'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'w0rp/ale'
+Plugin 'nightsense/snow'
+Plugin 'morhetz/gruvbox'
 
 " Themes
 Plugin 'flazz/vim-colorschemes'
@@ -38,8 +40,8 @@ call vundle#end()
 
 syntax on
 set t_Co=256
-set background=light
-colorscheme solarized
+set background=dark
+colorscheme gruvbox
 highlight Normal ctermbg=NONE
 highlight nonText ctermbg=NONE
 set number
@@ -56,6 +58,9 @@ autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in
 
 " Map open NERDTree to Ctrl + N
 map <C-n> :NERDTreeToggle<CR>
+
+" Map NERDTree find to Ctrl + I
+map <C-i> :NERDTreeFind<CR>
 
 filetype plugin indent on    " required
 
