@@ -5,12 +5,15 @@ set rtp+=~/.vim/bundle/Vundle.vim
 " Plugins should be added between vundle begin and end
 call vundle#begin()
 
+Plugin 'AndrewRadev/splitjoin.vim'
 Plugin 'VundleVim/Vundle.vim'
+Plugin 'sickill/vim-pasta'
+Plugin 'tomtom/tcomment_vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-haml'
-Plugin 'tomtom/tcomment_vim'
+Plugin 'tpope/vim-ragtag'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'ervandew/supertab'
