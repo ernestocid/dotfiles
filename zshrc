@@ -9,7 +9,7 @@ export ZSH=/Users/$DEFAULT_USER/.oh-my-zsh
 # ZSH_THEME="robbyrussell"
 # ZSH_THEME="suvash"
 # ZSH_THEME="agnoster"
-ZSH_THEME="avit"
+ZSH_THEME="kphoen"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -91,6 +91,6 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export PATH="/Users/ernestocid/dev/tools/gradle2/bin:/Users/ernestocid/Tools/Leiningen:/Users/ernestocid/dev/tools/phantomjs/bin:$PATH"
 export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
 export PATH="/Users/ernesto/Workspace/good-scripts/bin:${PATH}"
-export PATH="$(brew --prefix qt@5.5)/bin:$PATH"
+# export PATH="$(brew --prefix qt@5.5)/bin:$PATH"
 
 source ~/.aliases

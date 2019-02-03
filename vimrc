@@ -35,13 +35,24 @@ Plugin 'morhetz/gruvbox'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'aradunovic/perun.vim'
 Plugin 'crusoexia/vim-dracula'
+Plugin 'sonph/onehalf', {'rtp': 'vim/'}
 
 call vundle#end()
 
 syntax on
 set t_Co=256
-set background=dark
-colorscheme gruvbox
+set cursorline
+" set background=dark
+" colorscheme tango
+colorscheme onehalflight
+let g:airline_theme='onehalfdark'
+
+if exists('+termguicolors')
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+  set termguicolors
+endif
+
 highlight Normal ctermbg=NONE
 highlight nonText ctermbg=NONE
 set number
