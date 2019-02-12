@@ -17,3 +17,5 @@ ln -s ${BASEDIR}/aliases ~/.aliases
 
 # git
 # ln -s ${BASEDIR}/gitconfig ~/.gitconfig
+
+echo "Done!"
