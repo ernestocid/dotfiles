@@ -5,12 +5,19 @@ set rtp+=~/.vim/bundle/Vundle.vim
 " Plugins should be added between vundle begin and end
 call vundle#begin()
 
+Plugin 'AndrewRadev/splitjoin.vim'
+Plugin 'tmhedberg/matchit'
 Plugin 'VundleVim/Vundle.vim'
+Plugin 'sickill/vim-pasta'
+Plugin 'tomtom/tcomment_vim'
+Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-haml'
-Plugin 'tomtom/tcomment_vim'
+Plugin 'tpope/vim-ragtag'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'ecomba/vim-ruby-refactoring'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'ervandew/supertab'
@@ -35,13 +42,24 @@ Plugin 'morhetz/gruvbox'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'aradunovic/perun.vim'
 Plugin 'crusoexia/vim-dracula'
+Plugin 'sonph/onehalf', {'rtp': 'vim/'}
 
 call vundle#end()
 
 syntax on
 set t_Co=256
-set background=dark
-colorscheme gruvbox
+set cursorline
+" set background=dark
+" colorscheme tango
+colorscheme onehalflight
+let g:airline_theme='onehalfdark'
+
+if exists('+termguicolors')
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+  set termguicolors
+endif
+
 highlight Normal ctermbg=NONE
 highlight nonText ctermbg=NONE
 set number
