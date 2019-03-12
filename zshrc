@@ -9,7 +9,12 @@ export ZSH=/Users/$DEFAULT_USER/.oh-my-zsh
 # ZSH_THEME="robbyrussell"
 # ZSH_THEME="suvash"
 # ZSH_THEME="agnoster"
-ZSH_THEME="kphoen"
+# ZSH_THEME="kphoen"
+# ZSH_THEME="frisk"
+# ZSH_THEME="theunraveler"
+ZSH_THEME="sorin"
+
+
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
