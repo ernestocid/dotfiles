@@ -108,3 +108,5 @@ export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
 export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
 export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
 export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
+export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
+
