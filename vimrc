@@ -66,7 +66,7 @@ if (has("termguicolors"))
 endif
 
 colorscheme one
-set background=light
+set background=dark
 let g:airline_theme='onehalfdark'
 
 if exists('+termguicolors')
