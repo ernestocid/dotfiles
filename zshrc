@@ -1,3 +1,5 @@
+ZSH_DISABLE_COMPFIX=true
+
 # Path to your oh-my-zsh installation.
 DEFAULT_USER=`whoami`
 export ZSH=/Users/$DEFAULT_USER/.oh-my-zsh
@@ -98,6 +100,7 @@ export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
 export PATH="/Users/ernesto/Workspace/good-scripts/bin:${PATH}"
 
 source ~/.aliases
+source ~/.aliases_specific
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -109,4 +112,3 @@ export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
 export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
 export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
 export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
-

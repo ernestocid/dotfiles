@@ -22,11 +22,11 @@ alias j="jobs"
 # 	colorflag="-G"
 # fi
 
-if [[ -x "$(which colorls)" ]]; then
-  alias ll="colorls --light -A"
-else
-  alias ll="ls -FGlahs"
-fi
+# if [[ -x "$(which colorls)" ]]; then
+  # alias ll="colorls --light -A"
+# else
+alias ll="ls -FGlahs"
+# fi
 
 # List all files colorized in long format
 alias l="ls -lF ${colorflag}"
@@ -155,3 +155,7 @@ alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resource
 alias reload="exec $SHELL -l"
 
 alias chrome="/Applications/Google\\ \\Chrome.app/Contents/MacOS/Google\\ \\Chrome"
+
+# Make nvim respond to vim command
+alias vim="nvim"
+alias oldvim="vim"
