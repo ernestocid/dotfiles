@@ -23,7 +23,7 @@ alias j="jobs"
 # fi
 
 # if [[ -x "$(which colorls)" ]]; then
-  # alias ll="colorls --light -A"
+#  alias ll="colorls --light -A"
 # else
 alias ll="ls -FGlahs"
 # fi
