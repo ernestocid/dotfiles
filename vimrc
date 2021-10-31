@@ -23,7 +23,6 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'ervandew/supertab'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
-Plugin 'garbas/vim-snipmate'
 Plugin 'honza/vim-snippets'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'bronson/vim-trailing-whitespace'
@@ -40,19 +39,16 @@ Plugin 'morhetz/gruvbox'
 
 " Themes
 Plugin 'flazz/vim-colorschemes'
-Plugin 'aradunovic/perun.vim'
 Plugin 'crusoexia/vim-dracula'
 Plugin 'sonph/onehalf', {'rtp': 'vim/'}
 Plugin 'rakr/vim-one'
+Plugin 'drewtempelmeyer/palenight.vim'
 
 call vundle#end()
 
 syntax on
 set t_Co=256
 set cursorline
-" set background=dark
-" colorscheme tango
-" colorscheme onehalflight
 
 if (has("nvim"))
   "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
@@ -65,9 +61,11 @@ if (has("termguicolors"))
   set termguicolors
 endif
 
-colorscheme one
 set background=dark
-let g:airline_theme='onehalfdark'
+colorscheme palenight
+
+let g:lightline = { 'colorscheme': 'palenight' }
+let g:airline_theme = "palenight"
 
 if exists('+termguicolors')
   let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
