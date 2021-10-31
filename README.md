@@ -1,4 +1,4 @@
-# Setting things up
+# dotfiles
 
 Install Vundle
 
