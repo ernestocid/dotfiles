@@ -1,5 +1,15 @@
 # dotfiles
 
+Install [oh-my-zsh](https://ohmyz.sh).
+
+Install [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md#oh-my-zsh).
+
+Create a symbolic link to `zshrc`
+
+```
+ln -s -f ~/dotfiles/zshrc ~/.zshrc
+```
+
 Install Vundle
 
 ```
