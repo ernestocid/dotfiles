@@ -4,6 +4,13 @@ Install [oh-my-zsh](https://ohmyz.sh).
 
 Install [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md#oh-my-zsh).
 
+Install [fzf](https://github.com/junegunn/fzf)
+
+```
+brew install fzf
+$(brew --prefix)/opt/fzf/install
+```
+
 Create a symbolic link to `zshrc`
 
 ```
@@ -36,4 +43,4 @@ Create a symbolic link to `tmux.conf`
 
 ```
 ln -s -f ~/dotfiles/tmux.conf ~/.tmux.conf
-``
+```
