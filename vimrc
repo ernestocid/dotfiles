@@ -18,7 +18,6 @@ Plugin 'tpope/vim-haml'
 Plugin 'tpope/vim-ragtag'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'ecomba/vim-ruby-refactoring'
-Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'ervandew/supertab'
 Plugin 'MarcWeber/vim-addon-mw-utils'
@@ -36,6 +35,7 @@ Plugin 'vim-syntastic/syntastic'
 Plugin 'w0rp/ale'
 Plugin 'nightsense/snow'
 Plugin 'morhetz/gruvbox'
+Plugin 'junegunn/fzf'
 
 " Themes
 Plugin 'flazz/vim-colorschemes'
@@ -112,3 +112,8 @@ set foldlevel=99
 
 " Enable folding with the spacebar
 nnoremap <space> za
+
+" Use fzf https://github.com/junegunn/fzf
+set rtp+=/opt/homebrew/opt/fzf
+" Maping :FZF to Ctrl+F
+nnoremap <silent> <C-f> :FZF<CR>
