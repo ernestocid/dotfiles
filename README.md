@@ -4,6 +4,12 @@ Install [oh-my-zsh](https://ohmyz.sh).
 
 Install [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md#oh-my-zsh).
 
+Install [Ag](https://github.com/ggreer/the_silver_searcher)
+
+```
+brew install the_silver_searcher
+```
+
 Install [fzf](https://github.com/junegunn/fzf)
 
 ```
