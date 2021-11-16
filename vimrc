@@ -6,6 +6,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'AndrewRadev/splitjoin.vim'
+Plugin 'mileszs/ack.vim'
 Plugin 'tmhedberg/matchit'
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'sickill/vim-pasta'
@@ -117,3 +118,6 @@ nnoremap <space> za
 set rtp+=/opt/homebrew/opt/fzf
 " Maping :FZF to Ctrl+F
 nnoremap <silent> <C-f> :FZF<CR>
+
+" Use Ag with ack.vim plugin
+let g:ackprg = 'ag --nogroup --nocolor --column'
