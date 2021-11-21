@@ -45,6 +45,7 @@ Plugin 'junegunn/fzf'
 
 " Themes
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'NLKNguyen/papercolor-theme'
 
 call vundle#end()
 
@@ -64,7 +65,7 @@ if (has("termguicolors"))
 endif
 
 set background=light
-colorscheme solarized
+colorscheme PaperColor
 
 let g:lightline = { 'colorscheme': 'palenight' }
 let g:airline_theme = "palenight"
@@ -84,6 +85,7 @@ set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 set clipboard=unnamed
+set laststatus=2
 
 " Autostart NERDTree when vim is opened
 autocmd StdinReadPre * let s:std_in=1
