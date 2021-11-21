@@ -1,3 +1,9 @@
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+
 set nocompatible              " be iMproved, required
 filetype off                  " required
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -35,15 +41,10 @@ Plugin 'Yggdroot/indentLine'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'w0rp/ale'
 Plugin 'nightsense/snow'
-Plugin 'morhetz/gruvbox'
 Plugin 'junegunn/fzf'
 
 " Themes
-Plugin 'flazz/vim-colorschemes'
-Plugin 'crusoexia/vim-dracula'
-Plugin 'sonph/onehalf', {'rtp': 'vim/'}
-Plugin 'rakr/vim-one'
-Plugin 'drewtempelmeyer/palenight.vim'
+Plugin 'altercation/vim-colors-solarized'
 
 call vundle#end()
 
@@ -62,8 +63,8 @@ if (has("termguicolors"))
   set termguicolors
 endif
 
-set background=dark
-colorscheme palenight
+set background=light
+colorscheme solarized
 
 let g:lightline = { 'colorscheme': 'palenight' }
 let g:airline_theme = "palenight"
@@ -100,12 +101,6 @@ let g:indentLine_color_term = 239
 
 " JSX Configurations
 let g:jsx_ext_required = 0
-
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
 
 " Enable folding
 set foldmethod=indent
