@@ -91,7 +91,7 @@ set expandtab
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
-set clipboard=unnamed
+set clipboard=unnamedplus
 set laststatus=2
 
 " Autostart NERDTree when vim is opened
