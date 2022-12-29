@@ -42,6 +42,7 @@ Plugin 'vim-syntastic/syntastic'
 Plugin 'w0rp/ale'
 Plugin 'nightsense/snow'
 Plugin 'junegunn/fzf'
+Plugin 'junegunn/fzf.vim'
 
 " Themes
 Plugin 'altercation/vim-colors-solarized'
@@ -113,8 +114,8 @@ nnoremap <space> za
 
 " Use fzf https://github.com/junegunn/fzf
 set rtp+=/opt/homebrew/opt/fzf
-" Maping :FZF to Ctrl+F
-nnoremap <silent> <C-f> :FZF<CR>
+" Maping :FZF to Ctrl+P
+nnoremap <silent> <C-p> :FZF<CR>
 
 " Use Ag with ack.vim plugin
 let g:ackprg = 'ag --nogroup --nocolor --column'
