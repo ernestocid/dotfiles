@@ -47,6 +47,7 @@ Plugin 'junegunn/fzf.vim'
 " Themes
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'NLKNguyen/papercolor-theme'
+Plugin 'ayu-theme/ayu-vim'
 
 call vundle#end()
 
@@ -65,8 +66,13 @@ if (has("termguicolors"))
   set termguicolors
 endif
 
-set background=light
-colorscheme PaperColor
+" Theme configuration
+" let ayucolor="light"  " for light version of theme
+" let ayucolor="mirage" " for mirage version of theme
+let ayucolor="dark"   " for dark version of theme
+colorscheme ayu
+" set background=dark
+" colorscheme PaperColor
 
 let g:lightline = { 'colorscheme': 'palenight' }
 let g:airline_theme = "palenight"
