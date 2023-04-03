@@ -41,14 +41,15 @@ Plugin 'Yggdroot/indentLine'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'w0rp/ale'
 Plugin 'nightsense/snow'
-Plugin 'junegunn/fzf'
 Plugin 'udalov/kotlin-vim'
+Plugin 'junegunn/fzf.vim'
 
 " Themes
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'NLKNguyen/papercolor-theme'
 Plugin 'drewtempelmeyer/palenight.vim'
 Plugin 'catppuccin/vim', { 'as': 'catppuccin' }
+Plugin 'ayu-theme/ayu-vim'
 
 call vundle#end()
 
@@ -69,6 +70,13 @@ endif
 
 " set background=dark
 colorscheme catppuccin_mocha
+" Theme configuration
+" let ayucolor="light"  " for light version of theme
+" let ayucolor="mirage" " for mirage version of theme
+" let ayucolor="dark"   " for dark version of theme
+" colorscheme ayu
+" set background=dark
+" colorscheme PaperColor
 
 " let g:lightline = { 'colorscheme': 'palenight' }
 " let g:airline_theme = "palenight"
@@ -90,7 +98,7 @@ set expandtab
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
-set clipboard=unnamed
+set clipboard=unnamedplus
 set laststatus=2
 
 " Autostart NERDTree when vim is opened
@@ -119,8 +127,8 @@ nnoremap <space> za
 
 " Use fzf https://github.com/junegunn/fzf
 set rtp+=/opt/homebrew/opt/fzf
-" Maping :FZF to Ctrl+F
-nnoremap <silent> <C-f> :FZF<CR>
+" Maping :FZF to Ctrl+P
+nnoremap <silent> <C-p> :FZF<CR>
 
 " Use Ag with ack.vim plugin
 let g:ackprg = 'ag --nogroup --nocolor --column'
