@@ -42,10 +42,13 @@ Plugin 'vim-syntastic/syntastic'
 Plugin 'w0rp/ale'
 Plugin 'nightsense/snow'
 Plugin 'junegunn/fzf'
+Plugin 'udalov/kotlin-vim'
 
 " Themes
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'NLKNguyen/papercolor-theme'
+Plugin 'drewtempelmeyer/palenight.vim'
+Plugin 'catppuccin/vim', { 'as': 'catppuccin' }
 
 call vundle#end()
 
@@ -64,11 +67,14 @@ if (has("termguicolors"))
   set termguicolors
 endif
 
-set background=light
-colorscheme PaperColor
+" set background=dark
+colorscheme catppuccin_mocha
 
-let g:lightline = { 'colorscheme': 'palenight' }
-let g:airline_theme = "palenight"
+" let g:lightline = { 'colorscheme': 'palenight' }
+" let g:airline_theme = "palenight"
+
+let g:lightline = {'colorscheme': 'catppuccin_mocha'}
+let g:airline_theme = 'catppuccin_mocha'
 
 if exists('+termguicolors')
   let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
