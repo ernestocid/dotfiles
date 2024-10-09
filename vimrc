@@ -48,6 +48,7 @@ Plugin 'junegunn/fzf.vim'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'NLKNguyen/papercolor-theme'
 Plugin 'ayu-theme/ayu-vim'
+Plugin 'catppuccin/vim', { 'as': 'catppuccin' }
 
 call vundle#end()
 
@@ -69,8 +70,8 @@ endif
 " Theme configuration
 " let ayucolor="light"  " for light version of theme
 " let ayucolor="mirage" " for mirage version of theme
-let ayucolor="dark"   " for dark version of theme
-colorscheme ayu
+" let ayucolor="dark"   " for dark version of theme
+colorscheme catppuccin_macchiato
 " set background=dark
 " colorscheme PaperColor
 
