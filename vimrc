@@ -41,12 +41,14 @@ Plugin 'Yggdroot/indentLine'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'w0rp/ale'
 Plugin 'nightsense/snow'
-Plugin 'junegunn/fzf'
+Plugin 'udalov/kotlin-vim'
 Plugin 'junegunn/fzf.vim'
 
 " Themes
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'NLKNguyen/papercolor-theme'
+Plugin 'drewtempelmeyer/palenight.vim'
+Plugin 'catppuccin/vim', { 'as': 'catppuccin' }
 Plugin 'ayu-theme/ayu-vim'
 Plugin 'catppuccin/vim', { 'as': 'catppuccin' }
 
@@ -67,16 +69,21 @@ if (has("termguicolors"))
   set termguicolors
 endif
 
+" set background=dark
+colorscheme catppuccin_mocha
 " Theme configuration
 " let ayucolor="light"  " for light version of theme
 " let ayucolor="mirage" " for mirage version of theme
 " let ayucolor="dark"   " for dark version of theme
-colorscheme catppuccin_macchiato
+" colorscheme ayu
 " set background=dark
 " colorscheme PaperColor
 
-let g:lightline = { 'colorscheme': 'palenight' }
-let g:airline_theme = "palenight"
+" let g:lightline = { 'colorscheme': 'palenight' }
+" let g:airline_theme = "palenight"
+
+let g:lightline = {'colorscheme': 'catppuccin_mocha'}
+let g:airline_theme = 'catppuccin_mocha'
 
 if exists('+termguicolors')
   let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
