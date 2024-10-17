@@ -16,6 +16,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
 	{ "christoomey/vim-tmux-navigator" },
 	{ "nvim-telescope/telescope.nvim", tag = "0.1.8" },
+	{ "github/copilot.vim" },
 	{ "preservim/nerdcommenter" },
 	{
 		"nvim-treesitter/nvim-treesitter",
