@@ -494,7 +494,26 @@ vim.opt.splitright = true
 vim.opt.termguicolors = true
 vim.opt.ignorecase = true -- Search case insensitive...
 
+-- Commands
+
+-- Copies file path for the current buffer
+vim.api.nvim_create_user_command("CpAbsPath", function()
+	local path = vim.fn.expand("%:p")
+	vim.fn.setreg("+", path)
+	vim.notify('Copied "' .. path .. '" to the clipboard!')
+end, {})
+
+vim.api.nvim_create_user_command("CpRelPath", function()
+	local path = vim.fn.expand("%")
+	vim.fn.setreg("+", path)
+	vim.notify('Copied "' .. path .. '" to the clipboard!')
+end, {})
+
 -- Remaps
+
+-- Copy current buffer relative or absolute path
+vim.api.nvim_set_keymap("n", "<leader>cfa", "<cmd>CpAbsPath<cr>", { noremap = true })
+vim.api.nvim_set_keymap("n", "<leader>cfr", "<cmd>CpRelPath<cr>", { noremap = true })
 
 -- Find files using Telescope command-line sugar.
 vim.api.nvim_set_keymap("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { noremap = true })
