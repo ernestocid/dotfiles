@@ -100,6 +100,8 @@ export EDITOR='vim'
 alias zshconfig="vim ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+alias n="nvim"
+
 # pyenv configs
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
