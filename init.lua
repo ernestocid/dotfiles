@@ -16,6 +16,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
 	{ "christoomey/vim-tmux-navigator" },
 	{ "nvim-telescope/telescope.nvim", tag = "0.1.8" },
+	{ "github/copilot.vim" },
 	{ "preservim/nerdcommenter" },
 	{
 		"nvim-treesitter/nvim-treesitter",
@@ -204,6 +205,9 @@ require("lazy").setup({
 					-- WARN: This is not Goto Definition, this is Goto Declaration.
 					--  For example, in C this would take you to the header.
 					map("gD", vim.lsp.buf.declaration, "[G]oto [D]eclaration")
+
+					-- Shows documentation in a hovering panel.
+					map("K", vim.lsp.buf.hover, "Hover documentation")
 
 					-- The following two autocommands are used to highlight references of the
 					-- word under your cursor when your cursor rests there for a little while.
@@ -493,7 +497,26 @@ vim.opt.splitright = true
 vim.opt.termguicolors = true
 vim.opt.ignorecase = true -- Search case insensitive...
 
+-- Commands
+
+-- Copies file path for the current buffer
+vim.api.nvim_create_user_command("CpAbsPath", function()
+	local path = vim.fn.expand("%:p")
+	vim.fn.setreg("+", path)
+	vim.notify('Copied "' .. path .. '" to the clipboard!')
+end, {})
+
+vim.api.nvim_create_user_command("CpRelPath", function()
+	local path = vim.fn.expand("%")
+	vim.fn.setreg("+", path)
+	vim.notify('Copied "' .. path .. '" to the clipboard!')
+end, {})
+
 -- Remaps
+
+-- Copy current buffer relative or absolute path
+vim.api.nvim_set_keymap("n", "<leader>cfa", "<cmd>CpAbsPath<cr>", { noremap = true })
+vim.api.nvim_set_keymap("n", "<leader>cfr", "<cmd>CpRelPath<cr>", { noremap = true })
 
 -- Find files using Telescope command-line sugar.
 vim.api.nvim_set_keymap("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { noremap = true })
