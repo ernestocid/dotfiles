@@ -18,6 +18,7 @@ require("lazy").setup({
 	{ "nvim-telescope/telescope.nvim", tag = "0.1.8" },
 	{ "github/copilot.vim" },
 	{ "preservim/nerdcommenter" },
+	{ "tpope/vim-fugitive" },
 	{
 		"nvim-treesitter/nvim-treesitter",
 		event = { "BufReadPre", "BufNewFile" },
@@ -497,6 +498,10 @@ vim.opt.splitright = true
 vim.opt.termguicolors = true
 vim.opt.ignorecase = true -- Search case insensitive...
 
+vim.opt.incsearch = true -- highlight as i am typing the search
+
+vim.opt.scrolloff = 8 -- minimum number of lines to show at the top or bottom when i am scrolling
+
 -- Commands
 
 -- Copies file path for the current buffer
@@ -528,3 +533,6 @@ vim.api.nvim_set_keymap("n", "<leader>fh", "<cmd>Telescope help_tags<cr>", { nor
 vim.keymap.set("n", "<leader>gb", '<CMD>lua require("git.blame").blame()<CR>')
 vim.keymap.set("n", "<leader>go", "<CMD>lua require('git.browse').open(false)<CR>")
 vim.keymap.set("x", "<leader>go", ":<C-u> lua require('git.browse').open(true)<CR>")
+
+-- vim-fugitive
+vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
