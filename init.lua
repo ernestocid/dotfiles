@@ -536,3 +536,7 @@ vim.keymap.set("x", "<leader>go", ":<C-u> lua require('git.browse').open(true)<C
 
 -- vim-fugitive
 vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
+
+-- move selected text
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
