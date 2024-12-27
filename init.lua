@@ -502,6 +502,8 @@ vim.opt.incsearch = true -- highlight as i am typing the search
 
 vim.opt.scrolloff = 8 -- minimum number of lines to show at the top or bottom when i am scrolling
 
+vim.opt.relativenumber = true
+
 -- Commands
 
 -- Copies file path for the current buffer
