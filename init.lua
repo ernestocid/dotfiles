@@ -461,14 +461,14 @@ require("lazy").setup({
 			})
 		end,
 	},
+	-- themes
 	{
-		"vague2k/vague.nvim",
-		priority = 1000, -- Make sure to load this before all the other start plugins.
-		init = function()
-			vim.cmd.colorscheme("vague")
-			vim.cmd.hi("Comment gui=none")
-		end,
+		"folke/tokyonight.nvim",
+		lazy = false,
+		priority = 1000,
+		opts = {},
 	},
+	{ "EdenEast/nightfox.nvim" },
 })
 
 -- General settings
@@ -505,6 +505,7 @@ vim.opt.scrolloff = 8 -- minimum number of lines to show at the top or bottom wh
 vim.opt.relativenumber = true
 
 -- Commands
+vim.cmd([[colorscheme nightfox]])
 
 -- Copies file path for the current buffer
 vim.api.nvim_create_user_command("CpAbsPath", function()
