@@ -50,3 +50,5 @@ Create a symbolic link to `tmux.conf`
 ```
 ln -s -f ~/dotfiles/tmux.conf ~/.tmux.conf
 ```
+
+Install TPM plugin manager for tmux.
