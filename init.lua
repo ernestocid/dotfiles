@@ -18,6 +18,7 @@ require("lazy").setup({
 	{ "nvim-telescope/telescope.nvim", tag = "0.1.8" },
 	{ "github/copilot.vim" },
 	{ "preservim/nerdcommenter" },
+	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 	{ "tpope/vim-fugitive" },
 	{
 		"nvim-treesitter/nvim-treesitter",
@@ -505,7 +506,7 @@ vim.opt.scrolloff = 8 -- minimum number of lines to show at the top or bottom wh
 vim.opt.relativenumber = true
 
 -- Commands
-vim.cmd([[colorscheme nightfox]])
+vim.cmd([[colorscheme catppuccin-mocha]])
 
 -- Copies file path for the current buffer
 vim.api.nvim_create_user_command("CpAbsPath", function()
@@ -547,3 +548,6 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 -- U and D movements to center
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
+
+-- nvim-tree
+vim.keymap.set("n", "<C-i>", "<cmd>NvimTreeFindFile<cr>")
