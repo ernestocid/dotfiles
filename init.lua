@@ -15,11 +15,17 @@ vim.opt.rtp:prepend(lazypath)
 -- Plugin Section
 require("lazy").setup({
 	{ "christoomey/vim-tmux-navigator" },
+	{ "jeffkreeftmeijer/vim-numbertoggle" },
 	{ "nvim-telescope/telescope.nvim", tag = "0.1.8" },
 	{ "github/copilot.vim" },
 	{ "preservim/nerdcommenter" },
 	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 	{ "tpope/vim-fugitive" },
+	{
+		"MeanderingProgrammer/render-markdown.nvim",
+		dependencies = { "nvim-treesitter/nvim-treesitter", "echasnovski/mini.nvim" },
+		opts = {},
+	},
 	{
 		"nvim-treesitter/nvim-treesitter",
 		event = { "BufReadPre", "BufNewFile" },

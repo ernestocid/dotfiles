@@ -101,6 +101,9 @@ alias zshconfig="vim ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias n="nvim"
+alias zet="/Users/ernestocid/.dotfiles/zet.sh"
+
+export SECOND_BRAIN="/Users/ernestocid/Dropbox/Obsidian Vault"
 
 # pyenv configs
 export PYENV_ROOT="$HOME/.pyenv"
