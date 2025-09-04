@@ -19,13 +19,6 @@ require("lazy").setup({
 	{ "nvim-telescope/telescope.nvim", tag = "0.1.8" },
 	{ "github/copilot.vim" },
 	{ "preservim/nerdcommenter" },
-	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
-	{ "tpope/vim-fugitive" },
-	{
-		"MeanderingProgrammer/render-markdown.nvim",
-		dependencies = { "nvim-treesitter/nvim-treesitter", "echasnovski/mini.nvim" },
-		opts = {},
-	},
 	{
 		"nvim-treesitter/nvim-treesitter",
 		event = { "BufReadPre", "BufNewFile" },
@@ -469,6 +462,7 @@ require("lazy").setup({
 		end,
 	},
 	-- themes
+	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 	{
 		"folke/tokyonight.nvim",
 		lazy = false,
