@@ -538,9 +538,6 @@ vim.keymap.set("n", "<leader>gb", '<CMD>lua require("git.blame").blame()<CR>')
 vim.keymap.set("n", "<leader>go", "<CMD>lua require('git.browse').open(false)<CR>")
 vim.keymap.set("x", "<leader>go", ":<C-u> lua require('git.browse').open(true)<CR>")
 
--- vim-fugitive
-vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
-
 -- move selected text
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
@@ -548,6 +545,10 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 -- U and D movements to center
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
+
+-- n and N movements to center
+vim.keymap.set("n", "n", "nzzzv")
+vim.keymap.set("n", "N", "Nzzzv")
 
 -- nvim-tree
 vim.keymap.set("n", "<C-i>", "<cmd>NvimTreeFindFile<cr>")
