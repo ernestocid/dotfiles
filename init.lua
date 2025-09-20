@@ -448,7 +448,7 @@ require("lazy").setup({
 		dependencies = { "nvim-tree/nvim-web-devicons" },
 		config = function()
 			require("lualine").setup({
-				options = { theme = "gruvbox" },
+				options = { theme = "rose-pine" },
 				sections = {
 					lualine_c = {
 						{
@@ -462,6 +462,7 @@ require("lazy").setup({
 		end,
 	},
 	-- themes
+	{ "rose-pine/neovim", name = "rose-pine" },
 	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 	{
 		"folke/tokyonight.nvim",
@@ -506,7 +507,7 @@ vim.opt.scrolloff = 8 -- minimum number of lines to show at the top or bottom wh
 vim.opt.relativenumber = true
 
 -- Commands
-vim.cmd([[colorscheme catppuccin-mocha]])
+vim.cmd([[colorscheme rose-pine]])
 
 -- Copies file path for the current buffer
 vim.api.nvim_create_user_command("CpAbsPath", function()
