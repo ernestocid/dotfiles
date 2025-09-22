@@ -17,6 +17,7 @@ require("lazy").setup({
 	{ "christoomey/vim-tmux-navigator" },
 	{ "jeffkreeftmeijer/vim-numbertoggle" },
 	{ "nvim-telescope/telescope.nvim", tag = "0.1.8" },
+	{ "nvim-telescope/telescope.nvim", branch = "master", dependencies = { "nvim-lua/plenary.nvim" } },
 	{ "github/copilot.vim" },
 	{ "RRethy/vim-illuminate" },
 	{ "preservim/nerdcommenter" },
@@ -122,16 +123,14 @@ require("lazy").setup({
 					"jsonls",
 					"pyright",
 					"tailwindcss",
-					"ruff",
 				},
 			})
 
 			require("mason-tool-installer").setup({
 				ensure_installed = {
-					"prettier",
-					"stylua", -- lua formatter
-					"ruff", -- python formatter
+					"autopep8",
 					"pylint",
+					"stylua", -- lua formatter
 					"eslint_d",
 				},
 			})
@@ -224,56 +223,6 @@ require("lazy").setup({
 			})
 
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
-
-			mason_lspconfig.setup_handlers({
-				function(server)
-					nvim_lsp[server].setup({
-						capabilities = capabilities,
-					})
-				end,
-				["cssls"] = function()
-					nvim_lsp["cssls"].setup({
-						on_attach = on_attach,
-						capabilities = capabilities,
-					})
-				end,
-				["tailwindcss"] = function()
-					nvim_lsp["tailwindcss"].setup({
-						on_attach = on_attach,
-						capabilities = capabilities,
-					})
-				end,
-				["html"] = function()
-					nvim_lsp["html"].setup({
-						on_attach = on_attach,
-						capabilities = capabilities,
-					})
-				end,
-				["jsonls"] = function()
-					nvim_lsp["jsonls"].setup({
-						on_attach = on_attach,
-						capabilities = capabilities,
-					})
-				end,
-				["eslint"] = function()
-					nvim_lsp["eslint"].setup({
-						on_attach = on_attach,
-						capabilities = capabilities,
-					})
-				end,
-				["pyright"] = function()
-					nvim_lsp["pyright"].setup({
-						on_attach = on_attach,
-						capabilities = capabilities,
-					})
-				end,
-				["ruff"] = function()
-					nvim_lsp["ruff"].setup({
-						on_attach = on_attach,
-						capabilities = capabilities,
-					})
-				end,
-			})
 		end,
 	},
 	{
@@ -336,24 +285,19 @@ require("lazy").setup({
 
 			conform.setup({
 				formatters_by_ft = {
-					javascript = { "biome" },
-					typescript = { "biome" },
-					javascriptreact = { "biome" },
-					typescriptreact = { "biome" },
-					css = { "prettier" },
-					html = { "prettier" },
-					json = { "prettier" },
-					yaml = { "prettier" },
-					markdown = { "prettier" },
 					lua = { "stylua" },
-					python = { "ruff" },
+					python = { "autopep8" },
 				},
 				format_on_save = {
-					lsp_fallback = true,
+					lsp_fallback = false,
 					async = false,
 					timeout_ms = 1000,
 				},
 			})
+
+			conform.formatters.autopep8 = {
+				prepend_args = { "--max-line-length=120" },
+			}
 
 			vim.keymap.set({ "n", "v" }, "<leader>f", function()
 				conform.format({
@@ -484,6 +428,9 @@ end, {})
 -- Remaps
 
 -- Copy current buffer relative or absolute path
+vim.api.nvim_set_keymap("n", "<leader>gt", "<cmd>NvimTreeFindFile<cr>", { noremap = true })
+
+-- Copy current buffer relative or absolute path
 vim.api.nvim_set_keymap("n", "<leader>cfa", "<cmd>CpAbsPath<cr>", { noremap = true })
 vim.api.nvim_set_keymap("n", "<leader>cfr", "<cmd>CpRelPath<cr>", { noremap = true })
 
@@ -492,6 +439,9 @@ vim.api.nvim_set_keymap("n", "<space>ff", "<cmd>Telescope find_files<cr>", { nor
 vim.api.nvim_set_keymap("n", "<space>fg", "<cmd>Telescope live_grep<cr>", { noremap = true })
 vim.api.nvim_set_keymap("n", "<space>fb", "<cmd>Telescope buffers<cr>", { noremap = true })
 vim.api.nvim_set_keymap("n", "<space>fh", "<cmd>Telescope help_tags<cr>", { noremap = true })
+
+-- lspconfig
+vim.keymap.set("n", "<space>ee", vim.diagnostic.open_float, { noremap = true, silent = true })
 
 -- git.nvim
 vim.keymap.set("n", "<leader>gb", '<CMD>lua require("git.blame").blame()<CR>')
