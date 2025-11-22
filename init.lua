@@ -426,7 +426,7 @@ end, {})
 
 -- Remaps
 
--- Copy current buffer relative or absolute path
+-- Point to current file on NvimTree
 vim.api.nvim_set_keymap("n", "<leader>gt", "<cmd>NvimTreeFindFile<cr>", { noremap = true })
 
 -- Copy current buffer relative or absolute path
