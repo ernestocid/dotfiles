@@ -424,14 +424,21 @@ vim.api.nvim_create_user_command("CpRelPath", function()
 	vim.notify('Copied "' .. path .. '" to the clipboard!')
 end, {})
 
+vim.api.nvim_create_user_command("CpDirName", function()
+	local dir_name = vim.fn.fnamemodify(vim.fn.expand("%:p"), ":h:t")
+	vim.fn.setreg("+", dir_name)
+	vim.notify('Copied directory name "' .. dir_name .. '" to the clipboard!')
+end, {})
+
 -- Remaps
 
 -- Point to current file on NvimTree
 vim.api.nvim_set_keymap("n", "<leader>gt", "<cmd>NvimTreeFindFile<cr>", { noremap = true })
 
--- Copy current buffer relative or absolute path
+-- Copy current buffer relative, absolute path, or just the current directory name
 vim.api.nvim_set_keymap("n", "<leader>cfa", "<cmd>CpAbsPath<cr>", { noremap = true })
 vim.api.nvim_set_keymap("n", "<leader>cfr", "<cmd>CpRelPath<cr>", { noremap = true })
+vim.api.nvim_set_keymap("n", "<leader>cfd", "<cmd>CpDirName<cr>", { noremap = true })
 
 -- Find files using Telescope command-line sugar.
 vim.api.nvim_set_keymap("n", "<space>ff", "<cmd>Telescope find_files<cr>", { noremap = true })
